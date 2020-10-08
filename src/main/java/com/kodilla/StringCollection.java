@@ -10,9 +10,12 @@ public class StringCollection {
     }
 
     public String getElement(int n) {
+        if (n >= size)
+            throw new ArrayIndexOutOfBoundsException();
+
         Element currentElement = collectionHead;
 
-        for (int i = size-1; i > n; i--) {
+        for (int i = size - 1; i > n; i--) {
             currentElement = currentElement.getPrev();
         }
         return currentElement.getValue();
