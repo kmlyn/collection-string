@@ -39,6 +39,8 @@ public class StringCollection {
                     currentElement.getPrev().setNext(currentElement.getNext());
                 if (currentElement.getNext() != null)
                     currentElement.getNext().setPrev(currentElement.getPrev());
+                if (currentElement == collectionHead)
+                    collectionHead = currentElement.getPrev();
                 --size;
                 return true;
             }

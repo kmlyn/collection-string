@@ -8,7 +8,7 @@ public class Main {
         sc.addElement("Hitchens");
         sc.addElement("Dennett");
         System.out.println(sc.getElement(1));
-        sc.removeElement("Russell");
+        sc.removeElement("Dennett");
         System.out.println(sc.getElement(1));
     }
 }
